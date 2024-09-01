@@ -1,4 +1,4 @@
-# BerlingoBot - horrible but useful
+# BerlingoBot - horrible but useful Discord bot
 
 ## Instance setup
 - Install nodemon: `npm i -g nodemon`
