@@ -18,6 +18,15 @@
 					"<node_internals>/**"
 				],
 				"program": "${workspaceFolder}/index.js"
+			},
+			{
+				"type": "node",
+				"request": "launch",
+				"name": "Deploy commands",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "${workspaceFolder}/deploy-commands.js"
 			}
 		],
 		"compounds": []
