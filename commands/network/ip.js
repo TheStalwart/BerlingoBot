@@ -16,7 +16,7 @@ module.exports = {
                 interaction.reply(`Public IP: ${text}`);
             })
             .catch((error) => {
-                console.error(error);
+                console.error(error.message);
                 interaction.reply(`Error: ${error.message}`);
             });
 	},
