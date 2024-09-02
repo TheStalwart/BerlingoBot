@@ -5,7 +5,7 @@ module.exports = {
 	cooldown: 5,
 	data: new SlashCommandBuilder()
 		.setName('df')
-		.setDescription('Report file system disk space usage'),
+		.setDescription('File system disk space usage'),
 	async execute(interaction) {
         exec('df -h', (error, stdout, stderr) => {
         if (error) {

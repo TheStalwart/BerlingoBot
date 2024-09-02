@@ -4,7 +4,7 @@ module.exports = {
 	cooldown: 5,
 	data: new SlashCommandBuilder()
 		.setName('ip')
-		.setDescription('Resolve public IP address'),
+		.setDescription('Public IP address'),
 	async execute(interaction) {
         fetch(new Request("https://ifconfig.me", {
             headers: new Headers({
