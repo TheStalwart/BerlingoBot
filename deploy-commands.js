@@ -38,7 +38,7 @@ const rest = new REST().setToken(token);
 			{ body: [] },
 		);
 
-		console.log(`Successfully reloaded ${guildData.length} guild application (/) commands.`);
+		console.log(`Successfully reloaded ${guildData.length} guild application (/) commands: ${guildData.map((c) => c['name'])}`);
 
         // Deploy global commands that can be called in DM
         const globalData = await rest.put(
@@ -46,7 +46,7 @@ const rest = new REST().setToken(token);
 			{ body: commands },
 		);
 
-        console.log(`Successfully reloaded ${globalData.length} global application (/) commands.`);
+        console.log(`Successfully reloaded ${globalData.length} global application (/) commands: ${globalData.map((c) => c['name'])}`);
 	} catch (error) {
 		// And of course, make sure you catch and log any errors!
 		console.error(error);
