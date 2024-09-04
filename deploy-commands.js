@@ -1,5 +1,5 @@
 const { REST, Routes } = require('discord.js');
-const { clientId, guildId, token } = require('./config.json');
+const { applicationId, serverId, botToken } = require('./config.json');
 const fs = require('node:fs');
 const path = require('node:path');
 
@@ -25,7 +25,7 @@ for (const folder of commandFolders) {
 }
 
 // Construct and prepare an instance of the REST module
-const rest = new REST().setToken(token);
+const rest = new REST().setToken(botToken);
 
 // and deploy your commands!
 (async () => {
@@ -34,7 +34,7 @@ const rest = new REST().setToken(token);
 
 		// Delete previously deployed guild commands since all commands are global now
 		const guildData = await rest.put(
-			Routes.applicationGuildCommands(clientId, guildId),
+			Routes.applicationGuildCommands(applicationId, serverId),
 			{ body: [] },
 		);
 
@@ -42,7 +42,7 @@ const rest = new REST().setToken(token);
 
         // Deploy global commands that can be called in DM
         const globalData = await rest.put(
-			Routes.applicationCommands(clientId),
+			Routes.applicationCommands(applicationId),
 			{ body: commands },
 		);
 

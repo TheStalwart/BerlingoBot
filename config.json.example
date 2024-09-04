@@ -1,5 +1,5 @@
 {
-	"token": "your-token-goes-here",
-	"clientId": "your-application-id-goes-here",
-	"guildId": "your-server-id-goes-here"
+	"applicationId": "your-application-id-goes-here",
+	"botToken": "your-token-goes-here",
+	"serverId": "your-server-id-goes-here"
 }
