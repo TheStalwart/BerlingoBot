@@ -4,9 +4,10 @@
     "customizations": {
 		"vscode": {
             "extensions": [
-				"eamodio.gitlens",
-				"johnpapa.vscode-peacock"
-			]
+                "eamodio.gitlens",
+                "johnpapa.vscode-peacock",
+                "hangxingliu.vscode-systemd-support"
+            ]
         }
 	}
 }
