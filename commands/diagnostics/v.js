@@ -10,8 +10,10 @@ module.exports = {
         const lastCommitHash = await simpleGit().show(['--format=%H', '--summary'])
 		simpleGit().listRemote(['--get-url'], (err, data) => {
 			if (!err) {
-				console.log(data);
-				interaction.reply(`${data.trim()}/commit/${lastCommitHash}`);
+				var commitURL = data.trim() // strip newline at the end of git command output
+				commitURL = commitURL.replace('git@github.com:', 'https://github.com/') // convert SSH remote URL to HTTPS URL
+				commitURL = commitURL.substring(0, commitURL.lastIndexOf('.git')) // SSH remote URLs have ".git" suffix we need to strip for HTTPS URL
+				interaction.reply(`${commitURL}/commit/${lastCommitHash}`);
 			} else {
 				console.error(err)
 				interaction.reply(`${lastCommitHash}`);
