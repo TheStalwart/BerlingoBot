@@ -6,7 +6,8 @@
             "extensions": [
                 "eamodio.gitlens",
                 "johnpapa.vscode-peacock",
-                "hangxingliu.vscode-systemd-support"
+                "hangxingliu.vscode-systemd-support",
+                "DavidAnson.vscode-markdownlint"
             ]
         }
 	}
