@@ -14,7 +14,7 @@ Restart=always
 
 # The user under which the service should run. Replace 'pi' with the appropriate username.
 User=pi
-Environment=PATH=/usr/bin:/usr/local/bin
+Environment=PATH=/usr/bin:/usr/local/bin:/bin
 Environment=NODE_ENV=production
 
 StandardOutput=append:/var/log/berlingobot.log
