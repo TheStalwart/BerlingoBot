@@ -14,4 +14,5 @@
 ## Running as systemd service
 - Copy `berlingobot.service` file to `/etc/systemd/system/`
 - Edit the file to fill in missing values
+- `sudo systemctl daemon-reload`
 - `sudo systemctl enable berlingobot`
