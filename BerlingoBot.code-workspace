@@ -6,6 +6,7 @@
 	],
 	"settings": {
 		"files.trimTrailingWhitespace": true,
+		"files.eol": "\n",
 		"[markdown]": {
 			"editor.tabSize": 2
 		},
