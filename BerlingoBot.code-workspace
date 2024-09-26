@@ -1,59 +1,60 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"files.trimTrailingWhitespace": true,
-		"files.eol": "\n",
-		"[markdown]": {
-			"editor.tabSize": 2
-		},
-		"workbench.colorCustomizations": {
-			"activityBar.activeBackground": "#93e6fc",
-			"activityBar.background": "#93e6fc",
-			"activityBar.foreground": "#15202b",
-			"activityBar.inactiveForeground": "#15202b99",
-			"activityBarBadge.background": "#fa45d4",
-			"activityBarBadge.foreground": "#15202b",
-			"commandCenter.border": "#15202b99",
-			"sash.hoverBorder": "#93e6fc",
-			"statusBar.background": "#61dafb",
-			"statusBar.foreground": "#15202b",
-			"statusBarItem.hoverBackground": "#2fcefa",
-			"statusBarItem.remoteBackground": "#61dafb",
-			"statusBarItem.remoteForeground": "#15202b",
-			"titleBar.activeBackground": "#61dafb",
-			"titleBar.activeForeground": "#15202b",
-			"titleBar.inactiveBackground": "#61dafb99",
-			"titleBar.inactiveForeground": "#15202b99"
-		},
-		"peacock.color": "#61dafb",
-		"peacock.remoteColor": "#61dafb"
-	},
-	"launch": {
-		"version": "0.2.0",
-		"configurations": [
-			{
-				"type": "node",
-				"request": "launch",
-				"name": "Launch BerlingoBot",
-				"skipFiles": [
-					"<node_internals>/**"
-				],
-				"program": "${workspaceFolder}/index.js"
-			},
-			{
-				"type": "node",
-				"request": "launch",
-				"name": "Deploy commands",
-				"skipFiles": [
-					"<node_internals>/**"
-				],
-				"program": "${workspaceFolder}/deploy-commands.js"
-			}
-		],
-		"compounds": []
-	}
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.trimTrailingWhitespace": true,
+    "files.eol": "\n",
+    "editor.formatOnSave": true,
+    "[markdown]": {
+      "editor.tabSize": 2
+    },
+    "[jsonc]": {
+      "editor.tabSize": 2,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#93e6fc",
+      "activityBar.background": "#93e6fc",
+      "activityBar.foreground": "#15202b",
+      "activityBar.inactiveForeground": "#15202b99",
+      "activityBarBadge.background": "#fa45d4",
+      "activityBarBadge.foreground": "#15202b",
+      "commandCenter.border": "#15202b99",
+      "sash.hoverBorder": "#93e6fc",
+      "statusBar.background": "#61dafb",
+      "statusBar.foreground": "#15202b",
+      "statusBarItem.hoverBackground": "#2fcefa",
+      "statusBarItem.remoteBackground": "#61dafb",
+      "statusBarItem.remoteForeground": "#15202b",
+      "titleBar.activeBackground": "#61dafb",
+      "titleBar.activeForeground": "#15202b",
+      "titleBar.inactiveBackground": "#61dafb99",
+      "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#61dafb",
+    "peacock.remoteColor": "#61dafb"
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch BerlingoBot",
+        "skipFiles": ["<node_internals>/**"],
+        "program": "${workspaceFolder}/index.js"
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Deploy commands",
+        "skipFiles": ["<node_internals>/**"],
+        "program": "${workspaceFolder}/deploy-commands.js"
+      }
+    ],
+    "compounds": []
+  }
 }
