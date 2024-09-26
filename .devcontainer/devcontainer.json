@@ -1,14 +1,15 @@
 {
-    "image":"mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
 
-    "customizations": {
-		"vscode": {
-            "extensions": [
-                "eamodio.gitlens",
-                "johnpapa.vscode-peacock",
-                "hangxingliu.vscode-systemd-support",
-                "DavidAnson.vscode-markdownlint"
-            ]
-        }
-	}
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "DavidAnson.vscode-markdownlint",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "hangxingliu.vscode-systemd-support",
+        "johnpapa.vscode-peacock"
+      ]
+    }
+  }
 }
