@@ -7,19 +7,20 @@ module.exports = {
 		.setName('neofetch')
 		.setDescription('Run neofetch'),
 	async execute(interaction) {
-        exec('neofetch --stdout', (error, stdout, stderr) => {
+        await interaction.deferReply();
+        exec('neofetch --stdout', async (error, stdout, stderr) => {
         if (error) {
             console.error(`Error: ${error.message}`);
-            interaction.reply(`Error: ${error.message}`);
+            await interaction.editReply(`Error: ${error.message}`);
             return;
         }
         if (stderr) {
             console.error(`Stderr: ${stderr}`);
-            interaction.reply(`Stderr: ${stderr}`);
+            await interaction.editReply(`Stderr: ${stderr}`);
             return;
         }
         console.log(`Stdout: ${stdout}`);
-        interaction.reply(`\`\`\`\n${stdout}\`\`\``);
+        await interaction.editReply(`\`\`\`\n${stdout}\`\`\``);
         });
 	},
 };
