@@ -6,6 +6,8 @@ module.exports = {
     .setName("ip")
     .setDescription("Public IP address"),
   async execute(interaction) {
+    await interaction.deferReply();
+
     fetch(
       new Request("https://ifconfig.me", {
         headers: new Headers({
@@ -15,11 +17,11 @@ module.exports = {
     )
       .then((response) => response.text())
       .then((text) => {
-        interaction.reply(`Public IP: ${text}`);
+        interaction.editReply(`Public IP: ${text}`);
       })
       .catch((error) => {
         console.error(error.message);
-        interaction.reply(`Error: ${error.message}`);
+        interaction.editReply(`Error: ${error.message}`);
       });
   },
 };
