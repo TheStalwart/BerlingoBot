@@ -20,7 +20,7 @@ module.exports = {
         return;
       }
       console.log(`Stdout: ${stdout}`);
-      interaction.editReply(`\`\`\`\n${stdout}\`\`\``);
+      interaction.editReply(`${stdout}`);
     });
   },
 };
